@@ -32,7 +32,7 @@ def load_data(database_filepath):
     df =  pd.read_sql_table('DisasterMessages', engine)
     X = df.message.values
     y = df.iloc[:, 4:]
-    cateogry_names = list(df.columns[4:])
+    category_names = list(df.columns[4:])
     
     return X, y, category_names
 
