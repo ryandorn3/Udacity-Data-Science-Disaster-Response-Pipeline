@@ -29,7 +29,7 @@ def load_data(database_filepath):
     category_names = Returns a list of the category columns
     '''
     engine = create_engine('sqlite:///' + database_filepath)
-    df =  pd.read_sql_table('DisasterResponse', engine)
+    df =  pd.read_sql_table('DisasterMessages', engine)
     X = df.message.values
     y = df.iloc[:, 4:]
     cateogry_names = list(df.columns[4:])
